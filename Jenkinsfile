@@ -30,7 +30,7 @@ pipeline {
                         type: "docker",
                         url: "docker.io/hemaladev57/h-e2e-dm:1.0.1",
                         digest: "1123f6370647070393461636632373839386",
-                        label: "prod"
+                        label: "prod",
                         allowNoMatchingComponent: true
                     )
                     echo "Artifact output is: ${artifactOutput}"
