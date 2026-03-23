@@ -30,8 +30,7 @@ pipeline {
                         type: "docker",
                         url: "docker.io/hemaladev57/h-e2e-dm:1.0.1",
                         digest: "1123f6370647070393461636632373839386",
-                        label: "prod",
-                        allowNoMatchingComponent: true
+                        label: "prod"
                     )
                     echo "Artifact output is: ${artifactOutput}"
                     env.ARTIFACT_ID = artifactOutput
@@ -53,8 +52,7 @@ pipeline {
                     id: "${env.ARTIFACT_ID}",
                     url: "docker.io/hemaladev57/h-e2e-dm:1.0.1",
                     targetEnvironment: "PREPROD",
-                    labels: "prod",
-                    allowNoMatchingComponent: true
+                    labels: "prod"
                 )    
                 echo 'Deploying...'
                 sleep 2
