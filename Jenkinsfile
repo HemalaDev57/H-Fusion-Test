@@ -94,7 +94,8 @@ pipeline {
                     id: "${env.ARTIFACT_ID}",
                     url: "docker.io/hemaladev57/h-e2e-dm-1:1.0.2",
                     targetEnvironment: "Prod-production",
-                    labels: "prod"
+                    labels: "prod",
+                    allowNoMatchingComponent: true
                 )    
                 echo 'Deploying...'
                 sleep 2
